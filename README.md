@@ -6,3 +6,5 @@
 - Подключение слайдера Swiper.js
 - Модальное окно MicroModal
 - Анимация GSAP
+
+  [смотреть](https://vezdexod.netlify.app/)
