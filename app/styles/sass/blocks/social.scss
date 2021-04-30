@@ -1,0 +1,41 @@
+.social {
+  padding: 0;
+  list-style: none;
+}
+
+.social__item {
+  display: flex;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-top: -1px;
+  border: 1px solid rgba($white-color, $alpha: $opacity * 5);
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease-out;
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba($white-color, $alpha: $opacity * 5);
+  }
+
+  img {
+    width: 15px;
+    height: auto;
+    max-height: 15px;
+    opacity: 0.3;
+    transition: opacity 0.5s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+
+    img {
+      opacity: 1;
+    }
+  }
+}

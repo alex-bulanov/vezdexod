@@ -1,0 +1,72 @@
+{
+  "name": "vezdexod",
+  "version": "1.0.0",
+  "description": "Учебный проект",
+  "main": "index.js",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"app/styles/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint app/js/**/*.js",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "app/**/*.html",
+    "app/js/**/*.js",
+    "app/images/**/*.svg",
+    "app/styles/sass/**/*.scss"
+  ],
+  "author": "Александр Буланов",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-root-import": "^6.6.0",
+    "bootstrap": "^4.6.0",
+    "browser-sync": "^2.26.14",
+    "browsersync-ssi": "^0.2.4",
+    "del": "^6.0.0",
+    "eslint": "^7.22.0",
+    "eslint-config-htmlacademy": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-rsync": "0.0.9",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
+    "gulp.spritesmith": "^6.11.0",
+    "merge-stream": "^2.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "webpack-stream": "^6.1.2"
+  },
+  "dependencies": {
+    "gsap": "^3.6.1",
+    "micromodal": "^0.4.6",
+    "swiper": "^6.5.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-bulanov/vezdexod.git"
+  },
+  "keywords": [
+    "Учебный",
+    "проект"
+  ],
+  "bugs": {
+    "url": "https://github.com/alex-bulanov/vezdexod/issues"
+  },
+  "homepage": "https://github.com/alex-bulanov/vezdexod#readme"
+}

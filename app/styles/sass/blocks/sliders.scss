@@ -1,0 +1,355 @@
+.sliders {
+  padding-left: $size;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: $size-sm;
+  }
+}
+
+.sliders__wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.sliders__slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.sliders__text {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - #{$size});
+  z-index: 3;
+
+  @include media-breakpoint-down(sm) {
+    height: calc(100% - #{$size-sm});
+  }
+}
+
+.sliders__text-slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sliders__text-content {
+  padding-right: 22%;
+  text-align: right;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 10px;
+  }
+}
+
+.sliders__text-heading {
+  margin: 0 0 30px auto;
+  max-width: 780px;
+  font-family: "oswald-vh", sans-serif;
+  font-size: 60px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  span {
+    color: $accent-color;
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 500px;
+    font-size: 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 35px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 28px;
+  }
+}
+
+.sliders__text-desc {
+  display: block;
+  max-width: 500px;
+  margin: 0 0 20px auto;
+  font-size: 13px;
+  font-weight: 500;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
+}
+
+.sliders__images {
+  position: relative;
+  height: 100%;
+  width: 75%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black-color, $opacity * 4.5);
+    z-index: 2;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.sliders__images-slide {
+  height: 100%;
+  overflow: hidden;
+}
+
+.sliders__images-bg {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.sliders__bottom-panel {
+  position: absolute;
+  bottom: 0;
+  left: $size;
+  display: flex;
+  align-items: center;
+  width: calc(75% - #{$size});
+  height: $size;
+  z-index: 5;
+
+  @include media-breakpoint-down(sm) {
+    left: $size-sm;
+    width: 100%;
+    height: $size-sm;
+  }
+}
+
+.sliders__social {
+  position: relative;
+  bottom: -0.5px;
+  display: flex;
+  margin: 0;
+  flex: 0 1 auto;
+}
+
+.sliders .sliders__social-link {
+  width: $size;
+  height: $size;
+  border: none;
+  border-right: 1px solid rgba($white-color, $alpha: $opacity);
+  background-color: $dark-color;
+
+  &:last-of-type {
+    border: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 3px;
+      height: $size;
+      background-color: $accent-color;
+
+      @include media-breakpoint-down(sm) {
+        height: $size-sm;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: $size-sm;
+    height: $size-sm;
+  }
+}
+
+.sliders__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: $size;
+  flex: 0 0 140px;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+    height: $size-sm;
+  }
+}
+
+.sliders__pagination-bullet {
+  width: 6px;
+  height: 6px;
+  margin: 0 7.5px;
+  background-color: $white-color;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: $opacity * 10;
+
+  &--active {
+    position: relative;
+    background-color: $accent-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid $accent-color;
+      border-radius: 50%;
+    }
+  }
+}
+
+.sliders__scrollbar-wrapper {
+  flex: 1 0 0;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.sliders__scrollbar {
+  position: relative;
+  height: 1px;
+  background-color: rgba($white-color, $opacity * 2);
+}
+
+.sliders__scrollbar-drag {
+  position: absolute;
+  top: -1px;
+  height: 3px;
+  background-color: $accent-color;
+  cursor: pointer;
+}
+
+.sliders__navigation {
+  flex: 0 0 140px;
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    flex: 0 0 auto;
+    padding-left: 10px;
+  }
+}
+
+.sliders__navigation-button {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0 2.5px;
+  border: 2px solid $accent-color;
+  border-radius: 50%;
+  background-color: #3c3c3c;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: no-repeat url("../images/dist/sprite.svg#arrow") center / cover;
+  }
+
+  &--prev {
+    &::after {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--next {
+    &::after {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+
+  &--disabled {
+    border-color: #8a8a8a;
+
+    &::after {
+      filter: saturate(0);
+    }
+  }
+}
+
+.sliders__gear {
+  position: absolute;
+  top: 50%;
+  right: calc(24% - 235px);
+  width: 470px;
+  height: 470px;
+  background: no-repeat url("../images/dist/sprite.svg#gear") center / cover;
+  transform: translateY(-275px);
+  z-index: 2;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.sliders__count {
+  position: absolute;
+  top: 35px;
+  right: $size / 2;
+  width: 120px;
+  height: 80px;
+  font-family: "oswald-vh", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  z-index: 50;
+
+  &-current {
+    display: inline-block;
+    min-width: 42px;
+    font-size: 40px;
+    color: $accent-color;
+  }
+
+  @include media-breakpoint-down(md) {
+    top: 0;
+    right: 0;
+    transform: scale(0.6);
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.sliders__current {
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  font-family: "oswald-vh", sans-serif;
+  font-size: 100px;
+  color: $deep-dark-color;
+  -webkit-text-stroke: 1px #7f7f7f;
+
+  &-dot {
+    color: $accent-color;
+    -webkit-text-stroke: transparent;
+  }
+
+  @include media-breakpoint-down(md) {
+    bottom: 0;
+    right: 20px;
+    font-size: 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}

@@ -1,0 +1,70 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: 100%;
+  padding-top: $size;
+  background-color: $dark-color;
+
+  @include media-breakpoint-down(sm) {
+    width: $size-sm;
+    padding-top: 0;
+  }
+}
+
+.aside__decoration {
+  position: relative;
+  flex: 1 0 0;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 37px;
+    height: 60px;
+    background: no-repeat url("../images/dist/sprite.svg#decoration") center / cover;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.aside__social {
+  margin: 0;
+  flex: 1 0 0;
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.aside__share-icon {
+  position: relative;
+  width: $size;
+  flex: 0 0 $size;
+  background-color: $accent-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: no-repeat url("../images/dist/sprite.svg#share-solid") center / cover;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: $size-sm;
+    flex: 0 0 $size-sm;
+  }
+}

@@ -1,0 +1,41 @@
+.modal {
+  position: absolute;
+  font-family: "relaway-vh", sans-serif;
+  z-index: 100;
+}
+
+.modal__overlay {
+  padding: 0 20px;
+}
+
+.modal__container {
+  width: 100%;
+  border-radius: 0;
+  background-color: lighten($deep-dark-color, 6);
+  box-shadow: 0 0 0 8px rgba($white-color, $opacity);
+}
+
+.modal__title {
+  width: 100%;
+  font-family: "oswald-vh", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white-color;
+}
+
+.modal__close {
+  color: $white-color;
+  opacity: $opacity * 2.5;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.modal__input {
+  margin-bottom: 8px;
+}

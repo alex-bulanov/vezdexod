@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+  <title>Вездеход</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description"
+    content="Сайт компании «Вездеход», лучший выбор внедорожников, паркетники и внедорожники выбирают у нас">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png">
+
+  <link rel="preload" href="fonts/oswaldbold-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ralewayextrabold-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ralewaymedium-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ralewayregular-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ralewaysemibold-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotomedium-webfont.woff2" as="font" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  <div style="display: none;">
+    <!--#include virtual="/images/dist/sprite.svg" -->
+  </div>
+
+  <div class="cursor"></div>
+
+  <div class="home-page">
+    <header class="home-page__header header">
+      <h1 class="visually-hidden">Сайт компании «Вездеход»</h1>
+      <a class="header__logo" href="#">
+        <span class="header__logo-wrapper"><img class="header__logo-images" src="images/dist/sprite.svg#logo" width="34"
+            height="33" alt="Логотип компании «Вездеход»"></span>
+        <span class="header__logo-text">Вездеход</span>
+      </a>
+      <div class="header__decoration"></div>
+      <div class="header__contacts">
+        Телефон: <span class="header__numbers">555-65-34</span>
+        <span class="header__separator"></span>
+        <span class="header__address">
+          Адрес: <span class="header__text">ул. Московская, 35</span>
+        </span>
+      </div>
+      <div class="header__decoration"></div>
+      <div class="header__menu-button-container">
+        <a class="header__menu-button" href="#" aria-label="Переключатель меню"></a>
+      </div>
+    </header>
+
+    <div class="home-page__content content">
+      <aside class="content__aside aside">
+        <div class="aside__decoration"></div>
+        <ul class="aside__social social">
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <span class="visually-hidden">компания «Вездеход» в Инстаграм</span>
+              <img src="images/dist/sprite.svg#instagram-brands" width="15" height="15" alt="instagram">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <span class="visually-hidden">компания «Вездеход» во Вконтакте</span>
+              <img src="images/dist/sprite.svg#vk-brands" width="15" height="15" alt="vk">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <span class="visually-hidden">компания «Вездеход» на Фейсбук</span>
+              <img src="images/dist/sprite.svg#facebook-f-brands" width="15" height="15" alt="facebook">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <span class="visually-hidden">компания «Вездеход» в Твиттер</span>
+              <img src="images/dist/sprite.svg#twitter-brands" width="15" height="15" alt="twitter">
+            </a>
+          </li>
+        </ul>
+        <div class="aside__share-icon"></div>
+      </aside>
+
+      <div class="content__sliders sliders">
+        <!-- slider text -->
+        <div class="sliders__text">
+          <div class="sliders__wrapper">
+            <div class="sliders__text-slide sliders__slide">
+              <div class="sliders__text-content">
+                <h2 class="sliders__text-heading">Подбор внедорожника <span>на любой</span> случай</h2>
+                <b class="sliders__text-desc">Выберем и подберём для вас любой внедорожник в кратчайшие сроки, с учётом
+                  всех ваших пожеланий и всех
+                  необходимых
+                  потребностей.</b>
+                <button class="sliders__text-button button" data-micromodal-open="modal-1"><span>Оставить
+                    заявку</span></button>
+              </div>
+            </div>
+            <div class="sliders__text-slide sliders__slide">
+              <div class="sliders__text-content">
+                <h2 class="sliders__text-heading">Индивидуальный подход <span>к каждому</span> покупателю</h2>
+                <b class="sliders__text-desc">Все автомобили мы подбираем индивидуально для каждого клиента или
+                  покупателя и с трепетом относимся к результату нашей работы.</b>
+                <button class="sliders__text-button button" data-micromodal-open="modal-1"><span>Оставить
+                    заявку</span></button>
+              </div>
+            </div>
+            <div class="sliders__text-slide sliders__slide">
+              <div class="sliders__text-content">
+                <h2 class="sliders__text-heading">Выбор лучшей модели <span>из модельного</span> ряда</h2>
+                <b class="sliders__text-desc">В нашем модельном ряду имеются модели сотен различных внедорожников,
+                  которые удовлетворят даже самого требовательного
+                  клиента.</b>
+                <button class="sliders__text-button button" data-micromodal-open="modal-1"><span>Оставить
+                    заявку</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slider images -->
+        <div class="sliders__images">
+          <div class="sliders__wrapper">
+            <div class="sliders__images-slide sliders__slide">
+              <div class="sliders__images-bg" data-swiper-parallax="20%"
+                style="background-image: url(images/dist/slide-images/1.jpg);"></div>
+            </div>
+            <div class="sliders__images-slide sliders__slide">
+              <div class="sliders__images-bg" data-swiper-parallax="20%"
+                style="background-image: url(images/dist/slide-images/2.jpg);"></div>
+            </div>
+            <div class="sliders__images-slide sliders__slide">
+              <div class="sliders__images-bg" data-swiper-parallax="20%"
+                style="background-image: url(images/dist/slide-images/3.jpg);"></div>
+            </div>
+          </div>
+        </div>
+        <!-- slider bottom -->
+        <div class="sliders__bottom-panel">
+          <ul class="sliders__social social">
+            <li class="sliders__social-item social__item">
+              <a class="sliders__social-link social__link" href="#" target="_blank">
+                <span class="visually-hidden">компания «Вездеход» во Вконтакте</span>
+                <img src="images/dist/sprite.svg#vk-brands" width="15" height="15" alt="vk">
+              </a>
+            </li>
+            <li class="sliders__social-item social__item">
+              <a class="sliders__social-link social__link" href="#" target="_blank">
+                <span class="visually-hidden">компания «Вездеход» на Фейсбук</span>
+                <img src="images/dist/sprite.svg#facebook-f-brands" width="15" height="15" alt="facebook">
+              </a>
+            </li>
+            <li class="sliders__social-item social__item">
+              <a class="sliders__social-link social__link" href="#" target="_blank">
+                <span class="visually-hidden">компания «Вездеход» в Твиттер</span>
+                <img src="images/dist/sprite.svg#twitter-brands" width="15" height="15" alt="twitter">
+              </a>
+            </li>
+          </ul>
+          <div class="sliders__pagination"></div>
+          <div class="sliders__scrollbar-wrapper">
+            <div class="sliders__scrollbar"></div>
+          </div>
+          <div class="sliders__navigation">
+            <div class="sliders__navigation-button sliders__navigation-button--prev"></div>
+            <div class="sliders__navigation-button sliders__navigation-button--next"></div>
+          </div>
+        </div>
+
+        <div class="sliders__count">
+          <span class="sliders__count-current">01</span> / <span class="sliders__count-total"></span>
+        </div>
+
+        <div class="sliders__current"><span class="sliders__current-num">01</span><span
+            class="sliders__current-dot">.</span></div>
+
+        <div class="sliders__gear gear"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--#include virtual="parts/modal.html" -->
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

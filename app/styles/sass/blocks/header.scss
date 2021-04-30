@@ -1,0 +1,173 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $size;
+  border-bottom: 1px solid rgba($color: $white-color, $alpha: $opacity);
+  background-color: $deep-dark-color;
+
+  @include media-breakpoint-down(sm) {
+    height: $size-sm;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 200px;
+  color: $white-color;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex: 1 0 0;
+  }
+}
+
+.header__logo-text {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+
+  @include media-breakpoint-down(sm) {
+    width: $size-sm;
+    height: $size-sm;
+  }
+}
+
+.header__decoration {
+  flex: 1 0 0;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: $white-color;
+    opacity: $opacity * 1.5;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba($white-color, $alpha: $opacity * 5);
+
+  @include media-breakpoint-down(md) {
+    flex: 1 0 auto;
+    justify-content: center;
+  }
+}
+
+.header__separator {
+  width: 1px;
+  height: 30px;
+  margin: 0 20px;
+  background-color: rgba($white-color, $alpha: $opacity * 1.5);
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.header__address {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.header__numbers,
+.header__text {
+  margin-left: 7px;
+  font-family: "roboto-vh", sans-serif;
+
+  a {
+    color: $accent-color;
+  }
+}
+
+.header__numbers {
+  color: $accent-color;
+}
+
+.header__text {
+  color: rgba($white-color, $opacity * 7);
+}
+
+.header__menu-button-container {
+  position: relative;
+  flex: 0 0 200px;
+  height: $size;
+  text-align: right;
+
+  @include media-breakpoint-down(sm) {
+    height: $size-sm;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex: 1 0 0;
+  }
+}
+
+.header__menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $size;
+  height: $size;
+  background: #3c3c3c;
+  transition: all 0.25s ease-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 14px;
+    background: no-repeat url("../images/dist/sprite.svg#bars-solid") center / cover;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: $size-sm;
+    height: $size-sm;
+  }
+}

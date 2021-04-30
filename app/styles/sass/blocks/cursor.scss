@@ -1,0 +1,27 @@
+.cursor {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  margin: -8.5px 0 0 -8.5px;
+  background-color: $accent-color;
+  border-radius: 100%;
+  z-index: 100;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(1);
+  transition: transform 0.65s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+
+  &--active {
+    border: 0.1px solid $accent-color;
+    background-color: rgba($white-color, $opacity);
+    transform: scale(3.5);
+  }
+
+  &--hidden {
+    transform: scale(0.01);
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// @import 'node_modules/swiper/swiper-bundle' // Optional
+@import 'app/vendors/micromodal/micromodal' // Optional
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+    font-display: swap
+
+@include font('oswald-vh', normal, 700, '../fonts/oswaldbold-webfont.woff2')
+@include font('oswald-vh', normal, 500, '../fonts/oswaldmedium-webfont.woff2')
+@include font('raleway-vh', normal, 800, '../fonts/ralewayextrabold-webfont.woff2')
+@include font('raleway-vh', normal, 600, '../fonts/ralewaysemibold-webfont.woff2')
+@include font('raleway-vh', normal, 500, '../fonts/ralewaymedium-webfont.woff2')
+@include font('raleway-vh', normal, 400, '../fonts/ralewayregular-webfont.woff2')
+@include font('roboto-vh', normal, 500, '../fonts/robotomedium-webfont.woff2')
+
+
+// USER VARIABLES SECTION
+
+$accent-color: #f57500 // Accent Color
+$font-size: 16px // Body Font Size
+$text-color: #333333 // Text Color
+$dark-color: #303030
+$deep-dark-color: #252525
+$white-color: #ffffff
+$black-color: #000000
+$error-color: #ff0000
+$valid-color: #00ff00
+
+$line-height: 1.65 // Document Line Height
+$user-font: raleway-vh, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$retina-dpi: 144dpi
+$retina-dppx: 1.5dppx
+
+$size: 75px
+$size-sm: 58px
+$opacity: 0.1
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 30px
+// $gutter: $grid-gutter-width
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent-color
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: $error-color
+	&:required:valid
+		border-color: $valid-color
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+body, html
+  height: 100%;
+
+body
+	position: relative
+	font-family: $user-font
+	font-size: $font-size
+	line-height: $line-height
+	color: $text-color
+	min-width: 320px
+	overflow-x: hidden

@@ -1,0 +1,17 @@
+.home-page {
+  height: 100%;
+  padding-top: $size;
+  color: $white-color;
+  background-color: $deep-dark-color;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: $size-sm;
+  }
+}
+
+.home-page__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
